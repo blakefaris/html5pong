@@ -29,6 +29,17 @@
             text-align: left;
             vertical-align: top;
         }
+        @media(min-width: 992px) {
+            .button-control {
+                display: none;
+            }
+        }
+        .button-control {
+            width: 40%;
+            padding:20px;
+            border: 1px solid #333;
+            background-color: #d8d8d8;
+        }
     </style>
 </head>
 <body>
@@ -48,12 +59,17 @@
         </ul>
     </div>
 
+    <div>
+        <button id="leftPress" class="button-control">< Left</button>
+        <button id="rightPress" class="button-control">Right ></button>
+    </div>
     <div style="margin: 10px 0;">
 		<a href="https://github.com/blakefaris/html5pong">Git Repo</a>
 	</div>
 </div>
 
 <script type="text/javascript" id="game.js">
+
     var Game = function (canvas_id) {
         this.fps = 10; // Frames per second; limits the loop speed
 
@@ -74,6 +90,23 @@
 
         // Define controls
         var keysPressed = this.keysPressed;
+
+        var leftButton = document.getElementById('leftPress');
+        var rightPress = document.getElementById('rightPress');
+
+        leftButton.addEventListener("touchstart", function(e) {
+            keysPressed.left = true;
+        }, false);
+        leftButton.addEventListener("touchend", function(e) {
+            keysPressed.left = false;
+        }, false);
+        rightPress.addEventListener("touchstart", function(e) {
+            keysPressed.right = true;
+        }, false);
+        rightPress.addEventListener("touchend", function(e) {
+            keysPressed.right = false;
+        }, false);
+
         document.onkeydown = function (event) {
             var keyCode;
 
