@@ -39,6 +39,11 @@
             padding:20px;
             border: 1px solid #333;
             background-color: #d8d8d8;
+            display: inline-block;
+            user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -webkit-user-select: none;
         }
     </style>
 </head>
@@ -60,8 +65,8 @@
     </div>
 
     <div>
-        <button id="leftPress" class="button-control">< Left</button>
-        <button id="rightPress" class="button-control">Right ></button>
+        <div id="leftPress" class="button-control">< Left</div>
+        <div id="rightPress" class="button-control">Right ></div>
     </div>
     <div style="margin: 10px 0;">
 		<a href="https://github.com/blakefaris/html5pong">Git Repo</a>
