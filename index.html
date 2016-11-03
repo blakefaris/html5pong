@@ -29,14 +29,20 @@
             text-align: left;
             vertical-align: top;
         }
-        @media(min-width: 992px) {
-            .button-control {
+
+        @media(max-width: 768px) {
+            .controls {
                 display: none;
             }
         }
+
+        .button-controls {
+            margin: 40px 0;
+        }
+
         .button-control {
             width: 40%;
-            padding:20px;
+            padding:60px 20px;
             border: 1px solid #333;
             background-color: #d8d8d8;
             display: inline-block;
@@ -44,6 +50,12 @@
             -moz-user-select: none;
             -ms-user-select: none;
             -webkit-user-select: none;
+        }
+
+        @media(min-width: 769px) {
+            .button-control {
+                display: none;
+            }
         }
     </style>
 </head>
@@ -64,11 +76,11 @@
         </ul>
     </div>
 
-    <div>
+    <div class="button-controls">
         <div id="leftPress" class="button-control">< Left</div>
         <div id="rightPress" class="button-control">Right ></div>
     </div>
-    <div style="margin: 10px 0;">
+    <div style="margin: 100px 0 50px 0;">
 		<a href="https://github.com/blakefaris/html5pong">Git Repo</a>
 	</div>
 </div>
