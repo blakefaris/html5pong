@@ -3,6 +3,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="user-scalable=no">
     <title>HTML5 Canvas PONG game</title>
 
     <style type="text/css">
@@ -25,15 +26,7 @@
         }
 
         .controls {
-            display: inline-block;
-            text-align: left;
-            vertical-align: top;
-        }
-
-        @media(max-width: 768px) {
-            .controls {
-                display: none;
-            }
+            text-align: center;
         }
 
         .button-controls {
@@ -51,12 +44,6 @@
             -ms-user-select: none;
             -webkit-user-select: none;
         }
-
-        @media(min-width: 769px) {
-            .button-control {
-                display: none;
-            }
-        }
     </style>
 </head>
 <body>
@@ -68,12 +55,7 @@
     </canvas>
 
     <div class="controls">
-        <h3>Controls</h3>
-        <ul>
-            <li>Pause - P</li>
-            <li>Left - Left Arrow</li>
-            <li>Right - Right Arrow</li>
-        </ul>
+        <strong>Pause:</strong> P | <strong>Left:</strong> Left Arrow | <strong>Right</strong> Right Arrow
     </div>
 
     <div class="button-controls">
