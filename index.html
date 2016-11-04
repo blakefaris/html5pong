@@ -38,6 +38,7 @@
             padding:60px 20px;
             border: 1px solid #333;
             background-color: #d8d8d8;
+            cursor: pointer;
             display: inline-block;
             user-select: none;
             -moz-user-select: none;
@@ -103,6 +104,19 @@
             keysPressed.right = true;
         }, false);
         rightPress.addEventListener("touchend", function(e) {
+            keysPressed.right = false;
+        }, false);
+
+        leftButton.addEventListener("mousedown", function(e) {
+            keysPressed.left = true;
+        }, false);
+        leftButton.addEventListener("mouseup", function(e) {
+            keysPressed.left = false;
+        }, false);
+        rightPress.addEventListener("mousedown", function(e) {
+            keysPressed.right = true;
+        }, false);
+        rightPress.addEventListener("mouseup", function(e) {
             keysPressed.right = false;
         }, false);
 
